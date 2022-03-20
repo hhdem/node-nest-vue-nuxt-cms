@@ -13,13 +13,16 @@ import { AuthModule } from './auth/auth.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { Log4jsModule } from './libs/log4js/';
+import { ArticlesModule } from './articles/article.module';
+import { CustomersModule } from './customers/customer.module';
 
 const ENV = process.env.NODE_ENV;
+console.info('env = ', ENV);
 const dbInfo = {
-  host: 'localhost',
+  host: '127.0.0.1',
   port: 3306,
   username: 'root',
-  password: '123456789',
+  password: '',
 };
 if (ENV === 'prod') {
   dbInfo.host = '10.0.224.4';
@@ -40,7 +43,7 @@ const { host, port, username, password } = dbInfo;
       database: 'nest_cms_api',
       entities: [],
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     ProductsModule,
@@ -50,6 +53,8 @@ const { host, port, username, password } = dbInfo;
     BannerModule,
     UploadModule,
     AuthModule,
+    ArticlesModule,
+    CustomersModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),

@@ -13,6 +13,9 @@ import Layout from '@/layout'
 import aboutRouter from './modules/about'
 import userRouter from './modules/user'
 import productRouter from './modules/product'
+import customerRouter from './modules/customer'
+import articleRouter from './modules/article'
+
 import homeRouter from './modules/home'
 
 /**
@@ -81,7 +84,8 @@ export const constantRoutes = [
   },
   homeRouter,
   aboutRouter,
-
+  articleRouter,
+  customerRouter,
   productRouter,
   userRouter,
 ]

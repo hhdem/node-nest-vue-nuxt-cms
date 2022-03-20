@@ -46,6 +46,9 @@ export default {
     createArticle: 'Create Article',
     editArticle: 'Edit Article',
     articleList: 'Article List',
+    createCustomer: 'Create Customer',
+    editCustomer: 'Edit Customer',
+    customerList: 'Customer List',
     errorPages: 'Error Pages',
     page401: '401',
     page404: '404',
@@ -97,6 +100,18 @@ export default {
     productUpdate: 'Update Product',
     productCategoryCreate: 'Create Product Category',
     productCategoryUpdate: 'Update Product Category',
+
+    // article
+    article: 'Articles',
+    articleListManagement: 'List Management',
+    articleCreate: 'Create',
+    articleUpdate: 'Update',
+    
+    // customer
+    customer: 'Customers',
+    customerListManagement: 'List Management',
+    customerCreate: 'Create',
+    customerUpdate: 'Update',
 
     // admin
     user: 'User',

@@ -156,6 +156,59 @@ INSERT INTO `products` VALUES ('ec50c1c2-1d54-4539-a93d-09494f38f20e', '带有�
 COMMIT;
 
 -- ----------------------------
+-- Table structure for articles
+-- ----------------------------
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE `articles` (
+  `id` char(36) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `pic` varchar(255) NOT NULL,
+  `intro` mediumtext,
+  `content` mediumtext NOT NULL,
+  `status` tinyint NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  `route` varchar(255) DEFAULT NULL,
+  `category` varchar(255) NOT NULL,
+  `recommend` tinyint NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of articles
+-- ----------------------------
+BEGIN;
+INSERT INTO `articles` VALUES ('24a74ec6-410e-4441-b696-1d38e27b612a', '第一篇文字标题', 'public/uploads/a537e611196aeba85534188b1e88cb5d1634777807442.jpg', '', '<p>今天，Opera 推出了新版本的聊天服务 Hype。 Hype 1.3 的主要亮点是 Find new Friends 功能，它允许用户在应用程序内轻松结识新朋友。</p><p>&nbsp;</p><p>Hype 是第一个内置于移动浏览器 Opera Mini 中的非洲风格聊天服务，允许用户轻松设置帐户并立即开始使用安全的端到端加密进行聊天。这意味着用户可以在一个应用程序中浏览网页、与朋友聊天、与其他 Hype 用户分享自己创建的模因、贴纸和 GIF，并找到具有相同兴趣的人。 Hype 目前可用，并在非洲英语国家迅速流行，激活次数超过 240 万次。</p><p>&nbsp;</p><p>炒作1.3：一键结识有趣的人</p><p>&nbsp;</p><p>&nbsp;</p><p>应 Hype 用户的要求，我们推出了“查找新朋友”功能。现在，对结交新朋友和寻找有趣的人聊天感兴趣的 Hype 用户只需按一下按钮即可。</p><p>&nbsp;</p><p>如果您在周五晚上感到无聊或厌倦了总是与同一个人交谈，那么此功能将成为您的生命线。您所要做的就是打开您的 Hype 帐户，然后单击“立即与其他 Hype 用户聊天”。你将与​​一个随机的人匹配，他点击了同样的东西，也愿意结交新朋友。这就是兴奋的地方！除了他们的姓名和个人资料图片之外，您不知道年龄、国籍、职业或任何其他关于您的比赛的详细信息 - 享受对话吧！</p><p>&nbsp;</p><p>匹配完成后，您可以随心所欲地聊天，但仍要保护您的隐私。只有当你们都同意在 Hype 上成为朋友时，你们才能在以后找到对方并继续对话。如果您发现比赛无趣，您可以随时结束聊天并找到新的比赛。</p><p>&nbsp;</p><p>炒作有什么特别之处？</p><p>&nbsp;</p><p>炒作的建立是因为年轻一代的互联网用户期望他们在设备上使用的应用程序能够提供更多的社交连接。通过这种集成，Opera Mini 已成为世界上第一个集成社交组件的主要浏览器，该组件可让用户与最重要的用户保持联系。</p><p>&nbsp;</p><p>Opera 一直致力于改善聊天体验。 Hype 用户可以使用链接预览、GIF 支持和独特的内置模因创建器，使与朋友的聊天更加个性化和有趣。此外，用户可以加入基于兴趣的炒作俱乐部，寻找真正属于他们的社区，与志同道合的人聊天。</p><p>&nbsp;</p><p>Hype 是第一个内置于移动浏览器中的非洲灵感聊天服务。它为用户提供了一系列贴纸，其中包括非洲艺术家创作的目前在非洲流行的日常表达。 Hype 提供的这一独特服务从其他聊天服务中脱颖而出，为非洲人提供了在聊天时更准确地表达自己的新方式。</p><p>&nbsp;</p><p>炒作帐户设置</p><p>&nbsp;</p><p>要激活 Hype 帐户，您应该拥有 Opera Mini 应用程序。通过点击 Opera Mini 浏览器底部的 Hype 徽标或通过 O 菜单设置 Hype 帐户。接下来，您需要选择您的姓名并自拍或上传个性化照片 - 它会成为您的个人资料图片，并可供其他 Hype 用户看到。完成此过程后，您可以将 Hype 与手机的联系人列表同步以开始与他人聊天。</p>', 1, '2021-10-21 08:56:50', '2021-10-21 08:56:50', '', 'b7598bf0-0c1e-4b09-bb86-d13a5b1a195c', 0);
+
+COMMIT;
+
+-- ----------------------------
+-- Table structure for customers
+-- ----------------------------
+DROP TABLE IF EXISTS `customers`;
+CREATE TABLE `customers` (
+  `id` char(36) NOT NULL,
+  `showname` varchar(255) NOT NULL,
+  `mobile` varchar(255),
+  `email` varchar(255),
+  `wx` varchar(255),
+  `qq` varchar(255),
+  `note` mediumtext,
+  `content` mediumtext,
+  `status` tinyint NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of customers
+-- ----------------------------
+BEGIN;
+INSERT INTO `customers` VALUES ('24a74ec6-410e-4441-b696-1d38e27b622a', '客户名称', '13900002222', 'cus@qq.com', 'wx', 'qq', '<b>留言</b>', '', 1, '2021-10-21 08:56:50', '2021-10-21 08:56:50');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
