@@ -182,6 +182,31 @@ INSERT INTO `articles` VALUES ('24a74ec6-410e-4441-b696-1d38e27b612a', '第一�
 
 COMMIT;
 
+
+-- ----------------------------
+-- Table structure for article-categories
+-- ----------------------------
+DROP TABLE IF EXISTS `article-categories`;
+CREATE TABLE `article-categories` (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `status` tinyint NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  `route` varchar(255) DEFAULT NULL,
+  `description` mediumtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of article-categories
+-- ----------------------------
+BEGIN;
+INSERT INTO `article-categories` VALUES ('0cfabc98-ad1c-481f-b16b-309589a83a98', '新闻', 1, '2021-10-16 14:18:46', '2021-10-16 14:18:46', '', '');
+INSERT INTO `article-categories` VALUES ('2b2e4dc1-d610-4f3a-baf2-b69f89bb7d63', '快讯', 1, '2021-10-16 14:18:22', '2021-10-16 14:18:22', '', '');
+INSERT INTO `article-categories` VALUES ('4ad1870a-ac5d-4a5c-b96f-83db8a93106f', '移民', 1, '2021-10-16 14:18:32', '2021-10-16 14:18:32', '', '');
+COMMIT;
+
 -- ----------------------------
 -- Table structure for customers
 -- ----------------------------

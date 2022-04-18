@@ -6,7 +6,7 @@ export class CreateArticleDto {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  name: string;
+  title: string;
 
   @ApiProperty()
   route: string;

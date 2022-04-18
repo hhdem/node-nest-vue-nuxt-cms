@@ -15,6 +15,7 @@ import { join } from 'path';
 import { Log4jsModule } from './libs/log4js/';
 import { ArticlesModule } from './articles/article.module';
 import { CustomersModule } from './customers/customer.module';
+import { ArticleCategoriesModule } from './article-categories/article-categories.module';
 
 const ENV = process.env.NODE_ENV;
 console.info('env = ', ENV);
@@ -54,6 +55,7 @@ const { host, port, username, password } = dbInfo;
     UploadModule,
     AuthModule,
     ArticlesModule,
+    ArticleCategoriesModule,
     CustomersModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),

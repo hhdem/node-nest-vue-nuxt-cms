@@ -14,6 +14,13 @@
     "_name": "_1712eb26"
   },
   {
+    "name": "articles",
+    "path": "/articles",
+    "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/articles.vue",
+    "chunkName": "pages/articles",
+    "_name": "_05e21440"
+  },
+  {
     "name": "contact",
     "path": "/contact",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/contact.vue",
@@ -40,6 +47,13 @@
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/project2.vue",
     "chunkName": "pages/project2",
     "_name": "_51cefc3c"
+  },
+  {
+    "name": "article-id",
+    "path": "/article/:id?",
+    "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/article/_id.vue",
+    "chunkName": "pages/article/_id",
+    "_name": "_111e296e"
   },
   {
     "name": "index",

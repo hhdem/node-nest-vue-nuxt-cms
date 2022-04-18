@@ -74,7 +74,17 @@ export class ArticlesController {
   @Get(':id')
   @ApiOperation({ summary: '根据 id 查找' })
   async findOneById(@Param() params: RetrieveArticleDto): Promise<any> {
-    return await this.articlesService.findOneById(params.id);
+    console.info('findOneById == ', params);
+    var obj = await this.articlesService.findOneById(params.id);
+    return obj;
+  }
+
+  // 根据 id 查找
+  @Get('list/lastest')
+  @ApiOperation({ summary: '获取最新列表' })
+  async findLastest(@Query() query: FindArticleDto): Promise<Article> {
+    console.info('lastest == ', query);
+    return await this.articlesService.findAll({page:query.page, limit: query.limit, keyword: query.keyword, category:query.category, outerId: query.outerId});
   }
 
   // 数量

@@ -40,6 +40,9 @@
                                   <a href="/" v-bind:class="{ active: path=='/'}">首页</a>
                               </li>
                               <li >
+                                  <a href="/articles" v-bind:class="{ active: path=='/articles'}">欧洲新闻快讯</a>
+                              </li>
+                              <li >
                                   <a href="/about-slovak" v-bind:class="{ active: path=='/about-slovak'}">为什么是斯洛伐克</a>
                                   
                               </li>

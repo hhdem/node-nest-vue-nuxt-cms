@@ -105,6 +105,8 @@ export default {
     articleListManagement: '文章管理',
     articleCreate: '文章添加',
     articleUpdate: '文章更新',
+    articleCategoryCreate: '添加文章分类',
+    articleCategoryUpdate: '更新文章分类',
 
     // 客户
     customer: '客户列表',

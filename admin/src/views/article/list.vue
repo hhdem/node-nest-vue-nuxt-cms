@@ -129,7 +129,7 @@
 <script>
 import { config } from './config'
 import { fetchList, remove } from '@/api/article'
-import { fetchList as fetchCategoryList } from '@/api/product-category'
+import { fetchList as fetchArticleList } from '@/api/article-category'
 import waves from '@/directive/waves' // waves directive
 import { formatDate, listToObject, baseHost } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
@@ -151,7 +151,6 @@ export default {
       return formatDate(date)
     },
     categoryIDsToName(id) {
-      console.log('categoryList', categoryList)
       let item = categoryList[id] || {}
       let name = item.name || ''
 
@@ -210,7 +209,7 @@ export default {
 
     // 分类列表
     getCategory() {
-      fetchCategoryList().then(res => {
+      fetchArticleList().then(res => {
         const { data = [] } = res
 
         let listObject = listToObject(data)

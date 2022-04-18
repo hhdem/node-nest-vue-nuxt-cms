@@ -5,9 +5,10 @@
       :rules="rules"
       ref="validateForm"
       label-width="140px"
+      style="margin-bottom:50px;"
     >
-      <el-form-item label="名称" prop="name">
-        <el-input v-model="formData.name"></el-input>
+      <el-form-item label="名称" prop="title">
+        <el-input v-model="formData.title"></el-input>
       </el-form-item>
 
       <el-form-item label="路由（SEO）" prop="route">
@@ -26,7 +27,7 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item label="产品图片" prop="pic">
+      <el-form-item label="文章图片" prop="pic">
         <el-upload
           action="/api/upload"
           list-type="picture-card"
@@ -79,7 +80,7 @@
 <script>
 import { config } from '../config'
 import { getDetail, create, update } from '@/api/article'
-import { fetchList } from '@/api/product-category'
+import { fetchList } from '@/api/article-category'
 import { baseApi, baseHost } from '@/utils'
 import ClassicEditor from '@givebest/ckeditor5-custom-build'
 import '@givebest/ckeditor5-custom-build/build/translations/zh-cn.js'
@@ -91,7 +92,7 @@ const Authorization = `Bearer ${token}`
 const { routePath } = config
 
 export default {
-  name: 'ArticleCreateUpdate',
+  name: 'CustomerCreateUpdate',
   components: {},
   filters: {},
   props: {
@@ -112,7 +113,7 @@ export default {
 
       formData: {
         id: '',
-        name: '',
+        title: '',
         route: '',
         category: '',
         pic: '',
@@ -122,7 +123,7 @@ export default {
         status: true,
       },
       rules: {
-        name: [
+        title: [
           { required: true, message: '请输入名称', trigger: 'blur' },
           {
             min: 1,
@@ -326,8 +327,8 @@ export default {
             url: baseHost + pic.replace('public/', '/'),
           })
         }
-
-        this.formData = res
+        
+        this.formData = res;
       })
     },
 

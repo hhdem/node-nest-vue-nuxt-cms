@@ -10,6 +10,11 @@ export class FindArticleDto {
   })
   category: string;
 
+  @ApiProperty({
+    required: false,
+  })
+  outerId: string;
+
   @ApiProperty()
   page: number;
 

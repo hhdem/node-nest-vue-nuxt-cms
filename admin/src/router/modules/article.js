@@ -31,6 +31,29 @@ const articleRouter = {
       breadcrumb: false,
       meta: { title: 'articleUpdate', noCache: true },
     },
+    // 分类
+    {
+      path: 'category/list',
+      component: () => import('@/views/article/category/list'),
+      name: 'CategoryManagement',
+      meta: { title: 'categoryManagement', noCache: true },
+    },
+    {
+      path: 'category/create',
+      component: () => import('@/views/article/category/create'),
+      hidden: true,
+      name: 'ArticleCategoryCreate',
+      breadcrumb: false,
+      meta: { title: 'articleCategoryCreate', noCache: true },
+    },
+    {
+      path: 'category/update',
+      component: () => import('@/views/article/category/update'),
+      hidden: true,
+      name: 'ArticleCategoryUpdate',
+      breadcrumb: false,
+      meta: { title: 'articleCategoryUpdate', noCache: true },
+    },
   ],
 }
 export default articleRouter

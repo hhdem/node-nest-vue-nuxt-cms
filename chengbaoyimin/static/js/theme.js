@@ -382,30 +382,6 @@
         }
     });
     /*--------------------------------------------------------
-    / 14. Testimonial Slider 
-    /----------------------------------------------------------*/
-    if ($(".testimonial-slider").length > 0) {
-        $('.testimonial-slider').owlCarousel({
-            loop: true,
-            margin: 30,
-            responsiveClass: true,
-            dots: false,
-            autoplay: true,
-            smartSpeed: 700,
-            center: false,
-            nav: false,
-            items: 2,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                992: {
-                    items: 2
-                }
-            }
-        });
-    }
-    /*--------------------------------------------------------
     / 15. niceSelect js
     /----------------------------------------------------------*/
     $('.select-item select').niceSelect();

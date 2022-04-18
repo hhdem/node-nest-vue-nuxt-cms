@@ -1090,12 +1090,17 @@
 }
 .post-item-1 img{
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 10px 10px 0 0;
+    object-fit:cover;
 }
 .b-post-details{
     position: relative;
     padding: 30px 35px 37px;
+}
+.b-post-details2{
+    position: relative;
+    padding: 10px 15px;
 }
 .bp-meta{
     position: relative;
@@ -1123,16 +1128,18 @@
 .bp-meta a:hover{
     color: #5838fc;
 }
-.b-post-details h3{
+.b-post-details h3, .b-post-details2 h3{
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 16px;
     padding-top: 10px;
+    height: 70px;
+    overflow: hidden;
 }
-.b-post-details h3 a{
+.b-post-details h3 a, .b-post-details2 h3 a{
     color: inherit;
 }
-.b-post-details h3 a:hover{
+.b-post-details h3 a:hover, .b-post-details2 h3 a:hover{
     color: #5838fc;
 }
 .post-item-1:hover{
@@ -3648,7 +3655,7 @@ footer .widget ul li a:hover{
 /---------------------------------------------------------*/
 .blogpage-section{
     position: relative;
-    padding: 120px 0;
+    padding: 50px 0;
 }
 .bisylms-pagination {
     position: relative;
@@ -3784,7 +3791,7 @@ footer .widget ul li a:hover{
 .blog-sidebar .widget ul li {
     list-style: none;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 40px;
     font-weight: 600;
     color: #5d5a67;
@@ -3806,7 +3813,7 @@ footer .widget ul li a:hover{
     color: inherit;
     display: inline-block;
 }
-.blog-sidebar .widget ul li a:hover {
+.blog-sidebar .widget ul li a:hover, .blog-sidebar .widget ul li a.active {
     color: #5838fc;
 }
 .blog-sidebar .widget ul li span {
@@ -3911,7 +3918,6 @@ footer .widget ul li a:hover{
 }
 .single-post-area p{
     line-height: 30px;
-    margin: 0 0 30px;
 }
 .post-thumb{
     position: relative;
@@ -3928,6 +3934,19 @@ footer .widget ul li a:hover{
     line-height: 34px;
     color: #2c234d;
     margin: 0 0 15px;
+}
+.article-meta {
+    margin: 16px 0 36px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #707070;
+}
+.content-area {
+    
+    line-height: 1.667;
+    color: #222;
+    font-size: 18px;
+    margin-bottom: 50px;
 }
 blockquote{
     position: relative;

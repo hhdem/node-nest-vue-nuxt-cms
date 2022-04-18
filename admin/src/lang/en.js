@@ -106,6 +106,8 @@ export default {
     articleListManagement: 'List Management',
     articleCreate: 'Create',
     articleUpdate: 'Update',
+    articleCategoryCreate: 'Create Article Category',
+    articleCategoryUpdate: 'Update Article Category',
     
     // customer
     customer: 'Customers',

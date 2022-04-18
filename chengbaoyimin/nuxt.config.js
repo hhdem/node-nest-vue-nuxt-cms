@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "GiiBee CMS" },
+      // { hid: "description", name: "description", content: "城堡移民 Chengbaoyimin.com" },
       { name: "format-detection", content: "telephone=no" },
       { name: "theme-color", content: "#009bb1" }
     ],
@@ -30,7 +30,7 @@ export default {
       {src:'js/jquery.countdown.min.js'},
       {src:'js/jquery.easing.1.3.js'},
       {src:'js/jquery.shuffle.min.js'},
-      {src: 'js/theme.js', body: true,}
+      {src: 'js/theme.js'}
     ],
   },
 
@@ -83,7 +83,17 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/http"],
+  plugins: [
+    "~/plugins/http", 
+    "~/plugins/axios",
+    {
+      src:'~/plugins/storeCache',ssr: false
+    },
+    {
+      src: '~/plugins/dateformat',
+      ssr: true
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -98,14 +108,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     "@nuxt/http",
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
   ],
 
   http: {
     // debug: true,
     baseURL: "http://localhost:3000/" // Used as fallback if no runtime config is provided
   },
-
+  
   server: {
     port: "3001"
   },

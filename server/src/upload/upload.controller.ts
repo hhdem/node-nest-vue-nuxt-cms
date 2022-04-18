@@ -21,7 +21,7 @@ const { NODE_ENV } = process.env;
 const baseHost = baseHosts[NODE_ENV] || {
   uploadPath: 'public/',
   baseHost: 'http://localhost:3000/',
-  domain: 'www.giibee.com',
+  domain: '城堡快讯',
 };
 
 @UseGuards(JwtAuthGuardUser)

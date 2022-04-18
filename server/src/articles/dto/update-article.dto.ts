@@ -4,7 +4,7 @@ export class UpdateArticleDto {
   @ApiProperty()
   @IsNotEmpty()
   @IsString()
-  name: string;
+  title: string;
 
   @ApiProperty()
   route: string;

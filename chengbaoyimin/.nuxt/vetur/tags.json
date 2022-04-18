@@ -1,8 +1,14 @@
 {
+  "ArticleItem": {
+    "description": "Auto imported from components/ArticleItem.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
   "Header": {
     "description": "Auto imported from components/Header.vue"
+  },
+  "Pagination": {
+    "description": "Auto imported from components/Pagination.vue"
   }
 }

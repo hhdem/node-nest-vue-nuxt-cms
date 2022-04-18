@@ -294,7 +294,7 @@
                         <div class="pricing-item">
                             <h5>投资移民</h5>
                             <div class="p-price text-center">
-                                <sup>€</sup> 20000 <span>/人 + 置业服务费</span>
+                                <sup>€</sup> 20000 <span>置业服务费</span>
                             </div>
                             <div class="a-price text-center">
                                 <sup>€</sup> 25000 <span>/家庭 + 置业服务费</span>
@@ -317,6 +317,113 @@
             </div>
         </section>
         <!-- Pricing End -->
+
+        <!-- Testimonial Start -->
+        <section class="testimonial-section" style="background-image: url(/images/home2/testimonial-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="sec-title"><span>欧洲新闻快讯</span></h2>
+                    </div>
+                </div>
+                <div class="articles-slider row g-1">
+                    <div class=" col-lg-4 col-md-6" v-for="lastArt in lastestArticles"  :key="lastArt.id">
+                        <div class="post-item-1">
+                            <router-link :to="{name: 'article-id', params: { id: lastArt.id }}" exact>
+                            <img :src="staticHost + lastArt.pic" class="img-fluid">
+                            </router-link>
+                            <div class="b-post-details2">
+                                <router-link :to="{name: 'article-id', params: { id: lastArt.id }}" exact>
+                                    {{ lastArt.title}}
+                                </router-link>
+                            </div>
+                            <div class="b-post-details2 row pt-0">
+                                <div class="col-md-6 text-left ">
+                                    <span><small>{{ lastArt.updatedAt|diffDays() }}</small></span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <router-link :to="{name: 'article-id', params: { id: lastArt.id }}" class="read-more " exact>
+                                        Read More<i class="arrow_right"></i>
+                                    </router-link>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial End -->
   </div>
 </template>
+<script>
+import articleAPI from "../api/article";
+export default {
+  data: () => ({
+    lastestArticles: [],
+  }),
+  async fetch() {
+    this.fetchLastestArticles({});
+  },
+  async created() {
+      this.fetchLastestArticles({});
+  },
+  mounted() {
+      this.initData();
+  },
+  computed: {
+    staticHost() {
+      return this.$store.state.staticHost;
+    }
+  },
+  methods: {
+    async fetchLastestArticles({ page = 1, keyword = null, limit = 6, category = null, outerId = null }) {
+        const { data, statusText } = await articleAPI.getLastestArticles({
+          page,
+          limit,
+          keyword,
+          category,
+          outerId
+        });
+        if (statusText == "OK" && data) {
+            console.info('fetchLastestArticles ', data);
+            this.lastestArticles = data.data.map(v => {
+                const pic = v.pic;
+                if (pic) {
+                    // 替换图片路径中的public
+                    v.pic = pic.replace("public/", "/");
+                }
+                return v;
+            });
+        }
+    },
+    initData() {
+        console.info('initData ', $(".testimonial-slider").length + ' - ' + $(".articles-slider").length);
+        if ($(".testimonial-slider").length > 0) {
+            $('.testimonial-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                responsiveClass: false,
+                dots: false,
+                autoplay: true,
+                smartSpeed: 700,
+                center: false,
+                nav: false,
+                items: 2,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    992: {
+                        items: 2
+                    }
+                }
+            });
+        }
+        
+    }
+  }
+};
+</script>
+
 

@@ -2,7 +2,7 @@ import { Injectable, Inject, forwardRef } from '@nestjs/common';
 import { CreateArticleDto } from './dto/create-article.dto';
 import { Article } from './article.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, Like, Raw, In } from 'typeorm';
+import { Repository, Like, Raw, In, Not, Equal } from 'typeorm';
 import { RemoveArticleDto } from './dto/remove-article.dto';
 
 @Injectable()
@@ -40,7 +40,7 @@ export class ArticlesService {
 
   // 列表
   async findAll(query: any): Promise<any> {
-    const { keyword, category, page = 1, limit = 10, recommend } = query;
+    const { keyword, category, page = 1, limit = 10, recommend , outerId} = query;
     const skip = (page - 1) * limit;
 
     let params = {
@@ -50,9 +50,14 @@ export class ArticlesService {
 
     let whereParams = {};
 
+
+    whereParams = Object.assign(whereParams, {
+      status: Equal(true),
+    });
+    
     if (keyword) {
       whereParams = Object.assign(whereParams, {
-        name: Like(`%${keyword}%`),
+        title: Like(`%${keyword}%`),
       });
     }
 
@@ -68,6 +73,11 @@ export class ArticlesService {
       });
     }
 
+    if (outerId) {
+      whereParams = Object.assign(whereParams, {
+        id: Not(outerId),
+      });
+    }
     params = Object.assign(
       params,
       {
