@@ -4221,6 +4221,7 @@ blockquote cite{
 .comment-form{
     position: relative;
 }
+.comment-form input,
 .comment-form input[type="text"],
 .comment-form input[type="number"],
 .comment-form input[type="url"],

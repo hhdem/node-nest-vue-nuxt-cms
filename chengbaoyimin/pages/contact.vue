@@ -76,19 +76,19 @@
                             <p id="msg">所有有效留言都将在8小时内获得电话或邮件形式的回复</p>
                             <form id="customerForm" onsubmit="return false" action="#" class="row">
                                 <div class="col-md-12">
-                                    <input type="text" name="showname" placeholder="姓名">
+                                    <input type="text" name="showname" placeholder="姓名"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" name="email" placeholder="电子邮箱">
+                                    <input type="email" name="email" placeholder="电子邮箱"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="number" name="mobile" placeholder="电话">
+                                    <input type="number" name="mobile" placeholder="电话"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="wx" placeholder="微信">
+                                    <input type="text" name="wx" placeholder="微信"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="qq" placeholder="QQ">
+                                    <input type="text" name="qq" placeholder="QQ"/>
                                 </div>
                                 <div class="col-md-12">
                                     <textarea name="note" placeholder="详细个人信息"></textarea>
