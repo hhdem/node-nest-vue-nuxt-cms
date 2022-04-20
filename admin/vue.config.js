@@ -45,8 +45,9 @@ module.exports = {
       },
       '/prod-api': {
         target: process.env.VUE_APP_BASE_HOST,
+        changeOrigin: true,
         pathRewrite: {
-          // '^/api': '/'
+          '^/prod-api': '/'
         },
       },
     },
