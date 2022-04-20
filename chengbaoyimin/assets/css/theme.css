@@ -3440,6 +3440,7 @@ footer .widget ul li a:hover{
     z-index: 3;
     margin: 0 0 41px;
 }
+.contact-form input,
 .contact-form input[type="text"],
 .contact-form input[type="number"],
 .contact-form textarea,
