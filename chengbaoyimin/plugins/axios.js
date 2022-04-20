@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Promise } from 'es6-promise';
 
-export const baseURL = "http://localhost:3000/api";
+export const baseURL = "https://www.chengbaoyimin.com/api";
 
 let myredirect;
 export default function ({redirect }) {
