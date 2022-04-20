@@ -46,3 +46,15 @@
         <!-- Footer Section End -->
 
 </template>
+<script>
+export default {
+    head() {
+        return {
+            script: [
+                
+            ]
+        }
+    }
+}
+</script>
+

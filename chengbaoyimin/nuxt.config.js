@@ -1,6 +1,11 @@
 export default {
+  mode: "universal",
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+
+  // static: {
+  //   prefix: false
+  // },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -15,23 +20,26 @@ export default {
       { name: "format-detection", content: "telephone=no" },
       { name: "theme-color", content: "#009bb1" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/images/favicon.png" }],
-    script: [
-      {src:'js/jquery.js'},
-      {src:'js/bootstrap.min.js'},
-      {src:'js/jquery.appear.js'},
-      {src:'js/owl.carousel.min.js'},
-      {src:'js/slick.js'},
-      {src:'js/jquery.nice-select.min.js'},
-      {src:'js/swiper-bundle.min.js'},
-      {src:'js/TweenMax.min.js'},
-      {src:'js/lightcase.js'},
-      {src:'js/jquery.plugin.min.js'},
-      {src:'js/jquery.countdown.min.js'},
-      {src:'js/jquery.easing.1.3.js'},
-      {src:'js/jquery.shuffle.min.js'},
-      {src: 'js/theme.js'}
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/images/favicon.png" },
     ],
+    script: [
+      {src:'/js/jquery.js'},
+      {src:'/js/bootstrap.min.js'},
+      {src:'/js/jquery.appear.js'},
+      {src:'/js/owl.carousel.min.js'},
+      {src:'/js/slick.js'},
+      {src:'/js/jquery.nice-select.min.js'},
+      {src:'/js/swiper-bundle.min.js'},
+      {src:'/js/TweenMax.min.js'},
+      {src:'/js/lightcase.js'},
+      {src:'/js/jquery.plugin.min.js'},
+      {src:'/js/jquery.countdown.min.js'},
+      {src:'/js/jquery.easing.1.3.js'},
+      {src:'/js/jquery.shuffle.min.js'},
+      {src:'/js/theme.js'}
+    ],
+    __dangerouslyDisableSanitizers: ['script']
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
