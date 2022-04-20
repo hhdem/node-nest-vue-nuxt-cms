@@ -16,12 +16,12 @@
                                 <img :src="staticHost + article.pic">
                             </div>
                             <div v-html="article.content" class="content-area"></div>
-                            <div class="post-tags">
+                            <!-- <div class="post-tags">
                                 <h5>Tags:</h5>
                                 <a href="#">Bisy LMS</a>
                                 <a href="#">Design</a>
                                 <a href="#">General</a>
-                            </div>
+                            </div> -->
                             <div class="post-share">
                                 <h5>Share:</h5>
                                 <a class="fac" href="#"><i class="social_facebook"></i></a>
