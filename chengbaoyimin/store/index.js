@@ -1,4 +1,4 @@
 export const state = () => ({
-    staticHost: "http://localhost:3000/"
+    staticHost: "https://www.chengbaoyimin.com/"
   });
   
