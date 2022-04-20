@@ -87,7 +87,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"城堡移民","htmlAttrs":{"lang":"zh-cn"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"format-detection","content":"telephone=no"},{"name":"theme-color","content":"#009bb1"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"}],"script":[],"__dangerouslyDisableSanitizers":["script"],"style":[]},
+    head: {"title":"城堡移民","htmlAttrs":{"lang":"zh-cn"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"format-detection","content":"telephone=no"},{"name":"theme-color","content":"#009bb1"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fjquery.js"},{"src":"\u002Fjs\u002Fbootstrap.min.js"},{"src":"\u002Fjs\u002Fjquery.appear.js"},{"src":"\u002Fjs\u002Fowl.carousel.min.js"},{"src":"\u002Fjs\u002Fslick.js"},{"src":"\u002Fjs\u002Fjquery.nice-select.min.js"},{"src":"\u002Fjs\u002Fswiper-bundle.min.js"},{"src":"\u002Fjs\u002FTweenMax.min.js"},{"src":"\u002Fjs\u002Flightcase.js"},{"src":"\u002Fjs\u002Fjquery.plugin.min.js"},{"src":"\u002Fjs\u002Fjquery.countdown.min.js"},{"src":"\u002Fjs\u002Fjquery.easing.1.3.js"},{"src":"\u002Fjs\u002Fjquery.shuffle.min.js"},{"src":"\u002Fjs\u002Ftheme.js"}],"__dangerouslyDisableSanitizers":["script"],"style":[]},
 
     store,
     router,

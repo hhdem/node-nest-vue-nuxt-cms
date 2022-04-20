@@ -3,63 +3,54 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_45bc119a"
+    "chunkName": "pages/about"
   },
   {
     "name": "about-slovak",
     "path": "/about-slovak",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/about-slovak.vue",
-    "chunkName": "pages/about-slovak",
-    "_name": "_1712eb26"
+    "chunkName": "pages/about-slovak"
   },
   {
     "name": "articles",
     "path": "/articles",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/articles.vue",
-    "chunkName": "pages/articles",
-    "_name": "_05e21440"
+    "chunkName": "pages/articles"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_6d0a3126"
+    "chunkName": "pages/contact"
   },
   {
     "name": "privacy",
     "path": "/privacy",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/privacy.vue",
-    "chunkName": "pages/privacy",
-    "_name": "_20a6f2d5"
+    "chunkName": "pages/privacy"
   },
   {
     "name": "project1",
     "path": "/project1",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/project1.vue",
-    "chunkName": "pages/project1",
-    "_name": "_51c0e4bb"
+    "chunkName": "pages/project1"
   },
   {
     "name": "project2",
     "path": "/project2",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/project2.vue",
-    "chunkName": "pages/project2",
-    "_name": "_51cefc3c"
+    "chunkName": "pages/project2"
   },
   {
     "name": "article-id",
     "path": "/article/:id?",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/article/_id.vue",
-    "chunkName": "pages/article/_id",
-    "_name": "_111e296e"
+    "chunkName": "pages/article/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/hhdem/Documents/workspace/VSCProjects/node-nest-vue-nuxt-cms/chengbaoyimin/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6573ec5f"
+    "chunkName": "pages/index"
   }
 ]

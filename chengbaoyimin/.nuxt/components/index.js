@@ -1,7 +1,7 @@
-export const ArticleItem = () => import('../../components/ArticleItem.vue' /* webpackChunkName: "components/article-item" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../../components/Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const Header = () => import('../../components/Header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
-export const Pagination = () => import('../../components/Pagination.vue' /* webpackChunkName: "components/pagination" */).then(c => wrapFunctional(c.default || c))
+export { default as ArticleItem } from '../../components/ArticleItem.vue'
+export { default as Footer } from '../../components/Footer.vue'
+export { default as Header } from '../../components/Header.vue'
+export { default as Pagination } from '../../components/Pagination.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
