@@ -113,7 +113,7 @@ export default {
 
   http: {
     // debug: true,
-    baseURL: "http://localhost:3000/" // Used as fallback if no runtime config is provided
+    baseURL: "https://www.chengbaoyimin.com/" // Used as fallback if no runtime config is provided
   },
   
   server: {

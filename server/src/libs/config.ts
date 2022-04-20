@@ -3,14 +3,14 @@ const baseHosts = {
   development: {
     baseHost: 'http://localhost:3000/',
     uploadPath: 'public/',
-    domain: 'www.giibee.com',
+    domain: 'www.chengbaoyimin.com',
   },
 
   // production
   production: {
     baseHost: 'http://app.api',
     uploadPath: 'public/',
-    domain: 'www.giibee.com',
+    domain: 'www.chengbaoyimin.com',
   },
 };
 
