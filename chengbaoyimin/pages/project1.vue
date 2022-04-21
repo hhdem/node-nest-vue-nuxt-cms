@@ -142,7 +142,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p>
-                            <a href="contact.html" class="bisylms-btn-2">立即咨询</a>
+                            <a href="/contact" class="bisylms-btn-2">立即咨询</a>
                         </p>
                     </div>
                     
