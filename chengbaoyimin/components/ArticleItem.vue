@@ -4,8 +4,8 @@
             <img :src="staticHost + article.pic" class="img-fluid">
             <div class="b-post-details">
                 <div class="bp-meta">
-                    <a href="#"><i class="icon_clock_alt"></i>April 22, 2222</a>
-                    <a href="#"><i class="icon_chat_alt"></i>6 Comments</a>
+                    <a href="#"><i class="icon_clock_alt"></i>{{ article.updatedAt|formatDate('yyyy年MM月dd日')}}</a>
+                    <a href="#"><i class="icon_chat_alt"></i></a>
                 </div>
                 <h3>
                     <router-link :to="{name: 'article-id', params: { id: article.id }}" exact>
