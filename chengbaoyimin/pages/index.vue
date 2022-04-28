@@ -363,14 +363,15 @@ export default {
     lastestArticles: [],
   }),
   async fetch() {
-    this.fetchLastestArticles({});
+      this.initData();
+      this.fetchLastestArticles({});
   },
   async created() {
       this.fetchLastestArticles({});
   },
-  mounted() {
-      this.initData();
-  },
+//   mounted() {
+//       this.initData();
+//   },
   computed: {
     staticHost() {
       return this.$store.state.staticHost;
