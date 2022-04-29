@@ -107,7 +107,12 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/style-resources"],
+  buildModules: ["@nuxtjs/style-resources",'@nuxtjs/google-analytics'],
+
+  googleAnalytics: {
+    id: 'G-6METQFM943'
+  },
+
   styleResources: {
     less: "./assets/css/*.less"
   },
