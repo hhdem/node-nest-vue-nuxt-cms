@@ -110,7 +110,7 @@ export default {
   buildModules: ["@nuxtjs/style-resources",'@nuxtjs/google-analytics'],
 
   googleAnalytics: {
-    id: 'G-6METQFM943'
+    id: 'UA-227479987-1'
   },
 
   styleResources: {
