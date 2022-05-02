@@ -362,16 +362,18 @@ export default {
   data: () => ({
     lastestArticles: [],
   }),
-  async fetch() {
+//   async fetch() {
+//       this.initData();
+//       this.fetchLastestArticles({});
+//   },
+  async created() {
       this.initData();
       this.fetchLastestArticles({});
   },
-  async created() {
+  mounted() {
+      this.initData();
       this.fetchLastestArticles({});
   },
-//   mounted() {
-//       this.initData();
-//   },
   computed: {
     staticHost() {
       return this.$store.state.staticHost;
@@ -387,7 +389,6 @@ export default {
           outerId
         });
         if (statusText == "OK" && data) {
-            console.info('fetchLastestArticles ', data);
             this.lastestArticles = data.data.map(v => {
                 const pic = v.pic;
                 if (pic) {
@@ -399,7 +400,7 @@ export default {
         }
     },
     initData() {
-        console.info('initData ', $(".testimonial-slider").length + ' - ' + $(".articles-slider").length);
+        // console.info('initData ', $(".testimonial-slider").length + ' - ' + $(".articles-slider").length);
         if ($(".testimonial-slider").length > 0) {
             $('.testimonial-slider').owlCarousel({
                 loop: true,

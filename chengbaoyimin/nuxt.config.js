@@ -101,17 +101,14 @@ export default {
       src: '~/plugins/dateformat',
       ssr: true
     },
+    '@/plugins/gtag'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/style-resources",'@nuxtjs/google-analytics'],
-
-  googleAnalytics: {
-    id: 'UA-227479987-1'
-  },
+  buildModules: ["@nuxtjs/style-resources"],
 
   styleResources: {
     less: "./assets/css/*.less"
