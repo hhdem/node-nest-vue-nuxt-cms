@@ -66,18 +66,57 @@ export default {
         isProcessing: false,
         };
     },
-    created() {
-        const { page, keyword, limit, category } = this.$route.query;
-        this.category = category;
-        console.info('created ', this.$route.query);
-        this.fetchArticle({ page, keyword, limit, category });
-        this.fetchCategoryList({page:1});
-    },
-    // asyncData({query}) {
-    //     console.info('asyncData ', query);
-    //     const { page, keyword, limit } = query;
-    //     return {page, limit, keyword}
+    // created() {
+    //     const { page, keyword, limit, category } = this.$route.query;
+    //     this.category = category;
+    //     console.info('created ', this.$route.query);
+    //     this.fetchArticle({ page, keyword, limit, category });
+    //     this.fetchCategoryList({page:1});
     // },
+    async asyncData({query}) {
+        const { page, keyword, limit, category } = query;
+        try {
+                const {data, statusText, status} = await articleAPI.getArticles({
+                    page,
+                    limit,
+                    keyword,
+                    category,
+                });
+                if (statusText !== "OK") {
+                    throw new Error(statusText);
+                }
+                // this.articleList = data.data;
+                var articleList = data.data.map(v => {
+                    const pic = v.pic;
+
+                    if (pic) {
+                        // 替换图片路径中的public
+                        v.pic = pic.replace("public/", "/");
+                    }
+                    return v;
+                });
+                // this.total = data.total;
+                // // this.search = data.search;
+                // this.currentPage = data.currentPage;
+                var total = data.total;
+
+
+                const {data1, statusText1, status1} = await articleAPI.getArticleCategories({
+                    page:1,
+                });
+                var articleCategories = data1.data;
+                
+                return {articleList, total, articleCategories}
+                // this.pinyinFirstLetter = pinyinFirstLetter;
+            } catch (error) {
+                console.error(error);
+                Toast.fire({
+                icon: "error",
+                title: "無法取得列表，請稍後再試",
+                });
+            }
+
+    },
     beforeRouteUpdate(to, from, next) {
         const { page, keyword, limit, category } = to.query;
         this.category = category;

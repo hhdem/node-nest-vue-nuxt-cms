@@ -362,17 +362,26 @@ export default {
   data: () => ({
     lastestArticles: [],
   }),
-//   async fetch() {
-//       this.initData();
-//       this.fetchLastestArticles({});
-//   },
-  async created() {
+  async create() {
       this.initData();
-      this.fetchLastestArticles({});
+    //   this.fetchLastestArticles({});
   },
-  mounted() {
-      this.initData();
-      this.fetchLastestArticles({});
+  async asyncData() {
+      const { data, statusText } = await articleAPI.getLastestArticles({
+          page:1,
+          limit:6,
+        });
+        if (statusText == "OK" && data) {
+            var lastestArticles = data.data.map(v => {
+                const pic = v.pic;
+                if (pic) {
+                    // 替换图片路径中的public
+                    v.pic = pic.replace("public/", "/");
+                }
+                return v;
+            });
+            return {lastestArticles}
+        }
   },
   computed: {
     staticHost() {
