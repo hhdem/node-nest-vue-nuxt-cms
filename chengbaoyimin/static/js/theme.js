@@ -234,7 +234,7 @@
     /*--------------------------------------------------------
     / 10. Preloader
     /----------------------------------------------------------*/
-    $(window).load(function () {
+    jQuery(window).on('load', function(){
         if ($('.preloader').length > 0) {
             $('.preloader').delay(900).fadeOut('slow');
         }
