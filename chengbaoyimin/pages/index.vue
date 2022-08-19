@@ -83,7 +83,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                         <a href="#" class="bisylms-btn-2">查看详细介绍</a>
+                         <a href="/project1" class="bisylms-btn-2">查看详细介绍</a>
                     </div>
                 </div>
                 <div class="row mt-120">
@@ -248,7 +248,7 @@
                         <div class="pricing-item">
                             <h5>个体自雇创业</h5>
                             <div class="p-price text-center">
-                                <sup>€</sup> 20000 <span>/人</span>
+                                <sup>€</sup> 21000 <span>/人</span>
                             </div>
                             <div class="a-price text-center">
                                 <sup>€</sup> 25000 <span>/家庭</span>
